@@ -17,4 +17,4 @@ spring:
    username: guest
    password: guest
 server:
-  port: 9090
+  port: 8766

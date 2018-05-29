@@ -1,6 +1,20 @@
-eureka.client.serviceUrl.defaultZone=http://localhost:8880/eureka/
-spring.rabbitmq.host=localhost
-spring.rabbitmq.port=5672
-hystrix.command.default.execution.timeout.enabled=false 
-management.security.enabled=false
-server.port=8881
+spring:
+ cloud:
+  config:
+   server:
+    git:
+     uri: https://github.com/visionsws/vicente-cloud-config/
+     searchPaths: config-repo
+     username: 782006625@qq.com
+     password: shiws1203
+     clone-on-start: true
+   label: master
+ application:
+   name: config-server
+ rabbitmq:
+   host: localhost
+   port: 5672
+   username: guest
+   password: guest
+server:
+  port: 9090
