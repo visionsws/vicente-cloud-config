@@ -1,0 +1,22 @@
+server:
+ port: 8766
+spring:
+  application:
+    name: config-client
+ cloud:
+  config:
+   server:
+    git:
+     uri: https://github.com/visionsws/vicente-cloud-config/
+     searchPaths: config-repo
+     username: 782006625@qq.com
+     password: shiws1203
+     clone-on-start: true
+   label: master
+ application:
+   name: config-server
+ rabbitmq:
+   host: localhost
+   port: 5672
+   username: guest
+   password: guest
